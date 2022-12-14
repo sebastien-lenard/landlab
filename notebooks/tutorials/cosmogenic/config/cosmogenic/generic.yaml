@@ -1,0 +1,12 @@
+# Generic parameters/constants relative to cosmogenic nuclide production and loss
+# Used in BedrockCosmogenicProducer and CosmogenicProductionScaler
+
+#e-folding lengths [kg/m^2]
+e_folding_length_in_rock_spallation: 1600.0 # 160 g/cm^2
+e_folding_length_in_rock_muon_slow: 15000.0
+e_folding_length_in_rock_muon_fast: 43200.0
+e_folding_length_in_air_muon_slow: 2600.0
+e_folding_length_in_air_muon_fast: 5100.0
+
+# Number of half-lifes required to reach steady-state [-]
+steady_state_time_to_reach_factor: 5

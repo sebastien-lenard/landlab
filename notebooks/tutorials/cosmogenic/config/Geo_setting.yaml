@@ -1,0 +1,5 @@
+density_bedrock_kg_m3: 2700.0
+denudation_rate_bedrock_mm_y: 0.0
+target_mineral_presence_bedrock: 1.0
+density_cover_kg_m3: 2700.0
+thickness_cover_m: 0.0

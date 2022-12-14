@@ -408,7 +408,9 @@ class FlowRouter(Component):
             s = "topographic__elevation"
         if s not in g.at_node:
             g.add_field(s, np.zeros(nodes_n, dtype=float))
-        z = g.at_node[s] = g.at_node[s].astype(float)
+        z = g.at_node[s][:] = g.at_node[s].astype(float) 
+        # NB: the [:] is crucial to let the variables referencing the surface outside
+        # the component stil referencing the surface
 
         # 1.2. Water influx external to grid
         s = "water__unit_flux_in"
@@ -684,7 +686,7 @@ class FlowRouter(Component):
         # 1. Get the input grid data (steps #4 and #11)
         ##############################################
         g = self._grid
-        z = g.at_node[self._surface] = g.at_node[self._surface].astype(float)
+        z = g.at_node[self._surface][:] = g.at_node[self._surface].astype(float)
         diagonals = self._diagonals
         idx = self._link_idx_sorted_by_heads
 
@@ -868,7 +870,7 @@ class FlowRouter(Component):
         upstream_ordered_nodes[:] = np.full(
             nodes_n, g.BAD_INDEX, dtype=int
         )  # noqa: E501
-        return
+
         # Call to the algorithm.
         self._accumulation_funcs._calc_upstream_order_for_nodes(
             base_level_and_closed_nodes,

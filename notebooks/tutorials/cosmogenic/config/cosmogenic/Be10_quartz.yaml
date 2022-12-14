@@ -1,0 +1,10 @@
+# Be10-specific parameters/constants relative to cosmogenic nuclide production and loss
+# Used in BedrockCosmogenicProducer and CosmogenicProductionScaler
+
+# Half-life in [y]
+decay_half_life: 1.39e6
+
+# Production rates for the three pathways in [atom/kg/y]
+slhl_prod_rate_quartz_spallation: 4060 # 4.06 atom/g/y
+slhl_prod_rate_quartz_muon_slow:    12
+slhl_prod_rate_quartz_muon_fast:    39

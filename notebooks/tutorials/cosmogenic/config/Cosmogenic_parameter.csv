@@ -1,0 +1,10 @@
+e_folding_length_spall_in_rock_g_cm2,160.0
+e_folding_length_muon_slow_in_rock_g_cm2,1500.0
+e_folding_length_muon_fast_in_rock_g_cm2,4320.0
+e_folding_length_muon_slow_in_air_g_cm2,260.0
+e_folding_length_muon_fast_in_air_g_cm2,510.0
+cosmogenic_scaling_factor,1.0
+decay_half_life_Be10_y,1.39e6
+slhl_prod_rate_spall_Be10_atom_g_y,4.06
+slhl_prod_rate_muon_slow_Be10_atom_g_y,0.012
+slhl_prod_rate_muon_fast_Be10_atom_g_y,0.039

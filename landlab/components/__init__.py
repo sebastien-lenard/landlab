@@ -1,6 +1,10 @@
 from .bedrock_landslider import BedrockLandslider
 from .carbonate import CarbonateProducer
 from .chi_index import ChiFinder
+# for cosmogenic components, order scaler before producer because producer
+# imports the scaler (the alphabetical order generates a circular reference
+from .cosmogenic_production_scaler import CosmogenicProductionScaler
+from .cosmogenic_producer_in_bedrock import CosmogenicProducerInBedrock
 from .depression_finder import DepressionFinderAndRouter
 from .depth_dependent_diffusion import DepthDependentDiffuser
 from .depth_dependent_taylor_soil_creep import DepthDependentTaylorDiffuser
@@ -74,6 +78,8 @@ COMPONENTS = [
     CarbonateProducer,
     ChannelProfiler,
     ChiFinder,
+    CosmogenicProducerInBedrock,
+    CosmogenicProductionScaler,
     DepressionFinderAndRouter,
     DepthDependentDiffuser,
     DepthDependentTaylorDiffuser,
